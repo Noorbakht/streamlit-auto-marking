@@ -1,0 +1,12 @@
+boto3 >= 1.34.88
+pynamodb >= 6.0.0
+streamlit >= 1.33.0
+langchain
+fpdf
+PyPDF2
+openpyxl
+langchain-community
+langchain-anthropic
+pandas
+markdown
+pdf2docx

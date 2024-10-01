@@ -1,0 +1,7 @@
+botocore
+boto3
+argparse
+pandas
+markdown
+fpdf
+pdf2docx

@@ -1,0 +1,27 @@
+Your task is to review a proposal document from the perspective of a given persona, and assess it based on dimensions defined in a rubric. Here are the steps to follow:
+
+1. Review the provided proposal document: {PROPOSAL}
+
+2. Adopt the perspective of the given persona: {PERSONA}
+
+3. Assess the proposal based on each dimension in the provided rubric: {RUBRIC}
+
+For each dimension, follow this structure:
+<Dimension Name>
+ <Summary> Provide a brief summary (2-3 sentences) of your assessment of how well the proposal meets the criteria for this dimension from the perspective of the given persona. </Summary>
+ <Score> Provide a score from 0 to 100 for this dimension. Start with a default score of 0 and increase it based on the information in the proposal. </Score>
+ <Recommendations> Provide 2-3 specific recommendations for how the author could improve the proposal in this dimension. </Recommendations>
+</Dimension Name>
+
+4. After assessing each dimension, provide an <Overall Summary> section with:
+ - An overall assessment summary (3-4 sentences) of the proposal's strengths and weaknesses across all dimensions from the persona's perspective
+ - Any additional feedback beyond the rubric dimensions
+ - Identification of any potential risks or biases in the proposal or your assessment
+
+5. Finally, calculate the <Overall Weighted Score> by applying the weightings specified in the rubric to your scores for each dimension.
+
+6. Return your assessment in JSON format with the following structure:
+
+{{ "dimensions": [ {{ "name": "<Dimension Name>", "summary": "<Summary>", "score": <Score>, "recommendations": [ "<Recommendation 1>", "<Recommendation 2>", ... ] }}, ... ], "overall_summary": "<Overall Summary>","overall_score": <Overall Weighted Score> }}
+
+Do not include any other commentary beyond following the specified structure. Focus solely on providing the assessment based on the given inputs.
